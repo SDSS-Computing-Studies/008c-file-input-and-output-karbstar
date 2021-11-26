@@ -22,10 +22,17 @@ def needl (tr):
     lineData = data.split("\n")
     newList = []
     for line in lineData:
-        tempList = line.split(", ")
-        newList.append(tempList)
-    print(lineData)
+        tempList = line.split(",")
+        try:
+            x= tempList.index(tr)
+            df=True
+        except:
+            df=False
+        if df== True:
+            newList.append(tempList)
+    print(newList)
     x= newList.index(tr)
+    print(x)
     return x 
 if __name__ == "__main__":
     needl('AAL')
