@@ -15,15 +15,17 @@ Enter stock symbol: YANG
 No matches
 '''
 
-def needl (x):
-
+def needl (tr):
     filename = "task02.csv"
     file = open(filename,"r")
     data = file.read()
-    lineData = data
-    r= lineData.index(x)
-    print(r)
-    return r 
+    lineData = data.split("\n")
+    newList = []
+    for line in lineData:
+        tempList = line.split(", ")
+        newList.append(tempList)
+    print(lineData)
+    x= newList.index(tr)
+    return x 
 if __name__ == "__main__":
-    x=input("enter a stock symbol=>")
-    needl (x)
+    needl('AAL')
