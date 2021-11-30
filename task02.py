@@ -22,14 +22,14 @@ def needl (tr):
     lineData = data.split("\n")
     newList = []
     for line in lineData:
+        df=False
         tempList = line.split(",")
-        try:
-            x= tempList.index(tr)
-            df=True
-        except:
-            df=False
+        check=tempList[0]
+        if tr in check:
+            df =True
         if df== True:
             newList.append(tempList)
+            print(newList)
     print(newList)
     x= newList
     s=len(newList)
@@ -37,6 +37,6 @@ def needl (tr):
         print(newList)
     else:
         print(f"there are {s} stoks with the symbole {tr}")
-    return x 
 if __name__ == "__main__":
-    needl('AAL')
+    tr=input("enter a stock simbole=>")
+    needl (tr)    
