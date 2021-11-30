@@ -31,8 +31,12 @@ def needl (tr):
         if df== True:
             newList.append(tempList)
     print(newList)
-    x= newList.index(tr)
-    print(x)
+    x= newList
+    s=len(newList)
+    if s==1:
+        print(newList)
+    else:
+        print(f"there are {s} stoks with the symbole {tr}")
     return x 
 if __name__ == "__main__":
     needl('AAL')
