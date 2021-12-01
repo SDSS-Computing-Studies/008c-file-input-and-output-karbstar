@@ -29,14 +29,12 @@ def needl (tr):
             df =True
         if df== True:
             newList.append(tempList)
-            print(newList)
-    print(newList)
     x= newList
     s=len(newList)
     if s==1:
         print(newList)
     else:
-        print(f"there are {s} stoks with the symbole {tr}")
+        print(f"there are {s} stoks with the symbole {tr} in them")
 if __name__ == "__main__":
     tr=input("enter a stock simbole=>")
     needl (tr)    
