@@ -28,11 +28,14 @@ def needl (tr):
         if tr in check:
             df =True
         if df== True:
+            x=tempList.copy()
             newList.append(tempList)
-    x= newList
+
     s=len(newList)
     if s==1:
-        print(newList)
+        print(x[1])
+    elif s==0:
+        print("No matches")
     else:
         print(f"there are {s} stoks with the symbole {tr} in them")
 if __name__ == "__main__":
